@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Praktika.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,15 @@ namespace Praktika
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new AuthorizationPage());
+        }
+
+        private void BackButt_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
         }
     }
 }

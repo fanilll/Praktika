@@ -1,0 +1,64 @@
+﻿<Page x:Class="Praktika.Pages.ExamPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praktika.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExamPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="167*"/>
+            <RowDefinition Height="38*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0">
+            <StackPanel Orientation="Horizontal" Margin="5 0" VerticalAlignment="Center">
+                <TextBlock Margin="5 0">По дате</TextBlock>
+                <ComboBox x:Name="SortCB" Width="130" SelectionChanged="SortCB_SelectionChanged">
+                    <ComboBoxItem>По умолчанию</ComboBoxItem>
+                    <ComboBoxItem>Позже</ComboBoxItem>
+                    <ComboBoxItem>Раньше</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5 0" VerticalAlignment="Center">
+                <TextBlock Margin="5 0">По оценке</TextBlock>
+                <ComboBox x:Name="MarkSortCB" Width="50"  SelectionChanged="MarkSortCB_SelectionChanged">
+                    <ComboBoxItem>Все</ComboBoxItem>
+                    <ComboBoxItem>5</ComboBoxItem>
+                    <ComboBoxItem>4</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                    <ComboBoxItem>1</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock VerticalAlignment="Center" Margin="5 0">Поиск</TextBlock>
+                <TextBox x:Name="SearchTbx" TextChanged="SearchTbx_TextChanged" Width="200" Height="30"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <ListView x:Name="ExamList" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Width="100" Header="Дата" DisplayMemberBinding="{Binding Date_Exam, StringFormat=dd.MM.yyyy}"></GridViewColumn>
+                        <GridViewColumn Width="150" Header="Дисциплина" DisplayMemberBinding="{Binding Subject.Name_Subject}"></GridViewColumn>
+                        <GridViewColumn Width="150" Header="Студент" DisplayMemberBinding="{Binding Student.Surname_Student}"></GridViewColumn>
+                        <GridViewColumn Width="150" Header="Преподаватель" DisplayMemberBinding="{Binding Employee.Surname}"></GridViewColumn>
+                        <GridViewColumn Width="100" Header="Аудитория" DisplayMemberBinding="{Binding Auditory}"></GridViewColumn>
+                        <GridViewColumn Width="100" Header="Оценка" DisplayMemberBinding="{Binding Mark}"></GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="2">
+            <Button x:Name="AddButt" Click="AddButt_Click">Добавить</Button>
+            <Button x:Name="RedactButt" Click="RedactButt_Click">Редактировать</Button>
+            <Button x:Name="DeleteButt" Click="DeleteButt_Click">Удалить</Button>
+        </StackPanel>
+    </Grid>
+</Page>
