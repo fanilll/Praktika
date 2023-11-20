@@ -52,7 +52,7 @@ namespace Praktika.Pages
             var selectPosition = PositionCbx.SelectedItem as Position; var selectChief = ChiefCbx.SelectedItem as Employee;
             var selectDegree = DegreeCbx.SelectedItem as Degree; if (selectLectern == null || selectPosition == null || IdTb.Text == "0" || FioTb.Text == "" || SalaryTb.Text == "" || selectChief == null)
             {
-                errors = true; if (FioTb.Text == "кириешки") MessageBox.Show("какие нафиг кириешки?!");
+                errors = true;
                 MessageBox.Show("Заполните обязательные данные!");
             }
             if (IdTb.Text.Length < 3)

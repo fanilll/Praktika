@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Margin="5 5">Введите пароль</TextBlock>
+            <TextBlock HorizontalAlignment="Center" Margin="5 5">Авторизация</TextBlock>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock>Логин</TextBlock>
@@ -21,7 +21,7 @@
                     <PasswordBox x:Name="PasswordTb" Width="150" Height="20" Margin="5 5"></PasswordBox>
                 </StackPanel>
             </StackPanel>
-            <Button x:Name="EntryButt" Click="EntryButt_Click">Войти</Button>
+            <Button Background="LightBlue" Height="40" Width="150" x:Name="EntryButt" Click="EntryButt_Click">Войти</Button>
         </StackPanel>
     </Grid>
 </Page>

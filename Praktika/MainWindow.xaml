@@ -6,12 +6,18 @@
         xmlns:local="clr-namespace:Praktika"
         mc:Ignorable="d"
          Title="MainWindow" Height="550" Width="800">
-    <Grid Background="#FFD7F5F0">
+    <Grid Background="Lavender">
         <Grid.RowDefinitions>
-            <RowDefinition Height="37*"/>
             <RowDefinition Height="180*"/>
+            <RowDefinition Height="23*"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Height="40" x:Name="BackButt" Click="BackButt_Click">Назад</Button>
-        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Grid.Row="1"/>
+        <StackPanel Grid.Row="1" Background="#87CEEB">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="10">
+                <Button Background="LightBlue" x:Name="createQrBtn" Content="Создать QR" Width="150" Height="40" Click="Button_Click"></Button>
+                <Button Background="LightBlue" Height="40" x:Name="BackButt" Click="BackButt_Click">Назад</Button>
+            </StackPanel>
+        </StackPanel>
+       
+        <Frame NavigationUIVisibility="Hidden" x:Name="MainFrame" Grid.Row="0"/>
     </Grid>
 </Window>

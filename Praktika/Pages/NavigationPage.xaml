@@ -9,11 +9,15 @@
       Title="NavigationPage">
 
     <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button x:Name="StudButt" Click="StudButt_Click">Список студентов</Button>
-            <Button x:Name="EmpButt" Click="EmpButt_Click">Список сотрудников</Button>
-            <Button x:Name="DiscButt" Click="DiscButt_Click">Список дисциплин</Button>
-            <Button x:Name="ExamButt" Click="ExamButt_Click">Список экзаменов</Button>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Button  Background="#F08080" x:Name="StudButt" Click="StudButt_Click">Студенты</Button>
+                <Button Background="#F08080" x:Name="EmpButt" Click="EmpButt_Click">Сотрудники</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Button Background="#F08080" x:Name="DiscButt" Click="DiscButt_Click">Дисциплины</Button>
+                <Button Background="#F08080" x:Name="ExamButt" Click="ExamButt_Click">Экзамены</Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
