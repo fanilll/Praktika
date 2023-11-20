@@ -29,6 +29,12 @@ namespace Praktika.Pages
                 StudButt.Visibility = Visibility.Collapsed;
                 DiscButt.Visibility = Visibility.Collapsed;
             }
+            if(App.Role == "гость")
+            {
+                EmpButt.Visibility = Visibility.Collapsed;
+                StudButt.Visibility = Visibility.Collapsed;
+                ExamButt.Visibility = Visibility.Collapsed;
+            }
 
             if (App.Role == "tch") EmpButt.Visibility = Visibility.Collapsed;
         }

@@ -25,6 +25,12 @@ namespace Praktika.Pages
         {
             InitializeComponent();
             Refresh();
+            if(App.Role == "гость")
+            {
+                AddButt.Visibility = Visibility.Collapsed;
+                DeleteButt.Visibility = Visibility.Collapsed;
+                RedactButt.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void DeleteButt_Click(object sender, RoutedEventArgs e)

@@ -69,5 +69,11 @@ namespace Praktika.Pages
             }
             else MessageBox.Show("Неправильный логин или пароль");
         }
+
+        private void HomeButt_Click(object sender, RoutedEventArgs e)
+        {
+            App.Role = "гость";
+            NavigationService.Navigate(new NavigationPage());
+        }
     }
 }
