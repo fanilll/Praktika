@@ -51,6 +51,8 @@
                         <GridViewColumn Width="150" Header="Преподаватель" DisplayMemberBinding="{Binding Employee.Surname}"></GridViewColumn>
                         <GridViewColumn Width="100" Header="Аудитория" DisplayMemberBinding="{Binding Auditory}"></GridViewColumn>
                         <GridViewColumn Width="100" Header="Оценка" DisplayMemberBinding="{Binding Mark}"></GridViewColumn>
+                        
+                        
                     </GridView.Columns>
                 </GridView>
             </ListView.View>
