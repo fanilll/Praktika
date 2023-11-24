@@ -64,6 +64,7 @@ namespace Praktika.Pages
             SubjectList.ItemsSource = subsort.ToList().Where(x => x.IsDeleted != Convert.ToBoolean(1));
         }
 
+
         private void SortCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Refresh();
